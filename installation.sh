@@ -29,14 +29,14 @@ sudo apt-get install -y ros-kinetic-joy
 
 #------clone needed repositories-----
 
-git clone https://github.com/ArticulatedControl17/truck_master
-git clone https://github.com/ArticulatedControl17/gulliview_server
-git clone https://github.com/ArticulatedControl17/truck_automatic_ctrl
-git clone https://github.com/ArticulatedControl17/truck_manual_ctrl
-git clone https://github.com/ArticulatedControl17/path_planning
-git clone https://github.com/ArticulatedControl17/custom_msgs
-git clone https://github.com/ArticulatedControl17/truck_map
-git clone https://github.com/ArticulatedControl17/truck_visualization
+git clone https://github.com/ArticulatedControl18/truck_master
+git clone https://github.com/ArticulatedControl18/gulliview_server
+git clone https://github.com/ArticulatedControl18/truck_automatic_ctrl
+git clone https://github.com/ArticulatedControl18/truck_manual_ctrl
+git clone https://github.com/ArticulatedControl18/path_planning
+git clone https://github.com/ArticulatedControl18/custom_msgs
+git clone https://github.com/ArticulatedControl18/truck_map
+git clone https://github.com/ArticulatedControl18/truck_visualization
 
 #--- build workspace---
 cd ..
