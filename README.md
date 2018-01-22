@@ -43,6 +43,8 @@ For regulating commands to the hardware API, choosing between manual and automat
 * Xbox or PS3 controller
 * Laptop with ROS installed and the right repos (see installation above)
 * Connect to [network] on the truck and the laptop
+* trailer sensor is connected according to the following sketch.
+![trailer sensor schema](https://github.com/ArticulatedControl18/truck_master/raw/master/trailersensor_schema.png)
 
 ## 1. The truck ##
    * Boot the Pi by plugging in the powerbank
