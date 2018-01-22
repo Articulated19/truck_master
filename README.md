@@ -2,8 +2,14 @@
 For regulating commands to the hardware API, choosing between manual and automatic. Also a central hub for the truck project
 
 ## Installation ##
-* Network configuration (TODO): http://wiki.ros.org/ROS/NetworkSetup, http://wiki.ros.org/ROS/Tutorials/MultipleMachines 
+* Network configuration (If setting up the project on new network): http://wiki.ros.org/ROS/NetworkSetup, http://wiki.ros.org/ROS/Tutorials/MultipleMachines 
    * Configure the three hosts (ceiling computer, laptop, PI), so they can communicate via ROS.
+   * They need the same subnet
+   * 2018-01-22: Set the following static IPs through configuring the router: 192.168.1.xxx
+       Truck RPI: 134
+       Red tape RPI: 142
+       Ceiling computer: 136
+     
 
 * Laptop: Download this [script](https://github.com/ArticulatedControl18/truck_master/blob/master/installation.sh), which downloads ROS, creates a new catkin workspace and clones down all the repositories you need. If you don't need to do all this, just comment out the lines you don't want to run
 
@@ -49,10 +55,10 @@ For regulating commands to the hardware API, choosing between manual and automat
 * Open a new terminal window and run:
 
  
-    `ssh 192.168.5.31 -X -l bachelor` (TODO IP, password?)
+    `ssh 192.168.1.136 -X -l bachelor`
 
 
-    `cd repository/visionlocalization_old/build` (TODO update this repo name)
+    `cd repository/visionlocalization_old/build`
 
 
     `./startCameras.sh LAPTOP_IP`
