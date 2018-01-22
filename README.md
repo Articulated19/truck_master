@@ -2,8 +2,10 @@
 For regulating commands to the hardware API, choosing between manual and automatic. Also a central hub for the truck project
 
 ## Installation ##
+* Network configuration (TODO): http://wiki.ros.org/ROS/NetworkSetup, http://wiki.ros.org/ROS/Tutorials/MultipleMachines 
+   * Configure the three hosts (ceiling computer, laptop, PI), so they can communicate via ROS.
 
-* Download this [script](https://github.com/ArticulatedControl17/truck_master/blob/master/installation.sh), which downloads ROS, creates a new catkin workspace and clones down all the repositories you need. If you don't need to do all this, just comment out the lines you don't want to run
+* Laptop: Download this [script](https://github.com/ArticulatedControl18/truck_master/blob/master/installation.sh), which downloads ROS, creates a new catkin workspace and clones down all the repositories you need. If you don't need to do all this, just comment out the lines you don't want to run
 
     * Put the file where you want to create the new workspace and **source** it (just running it won't work)
      
@@ -24,6 +26,7 @@ For regulating commands to the hardware API, choosing between manual and automat
     * `rosnode kill path_planning`
     * Remove all obstacles
     * `rosrun path_planning path_planning_node.py`
+* To use the C++ path planning implementation, change branch of the path_planning repo and start again
 
 # How to run the truck #
 
@@ -33,9 +36,7 @@ For regulating commands to the hardware API, choosing between manual and automat
 * A powerbank to power the pi while driving.
 * Xbox or PS3 controller
 * Laptop with ROS installed and the right repos (see installation above)
-* Connect to vnet on the truck and the laptop
-* To get access to internet while connected to the vnet wifi you need to give Thomas the MAC-address for your computer. 
-This is not needed to run the truck but will make your life easier
+* Connect to [network] on the truck and the laptop
 
 ## 1. The truck ##
    * Boot the Pi by plugging in the powerbank
@@ -48,13 +49,10 @@ This is not needed to run the truck but will make your life easier
 * Open a new terminal window and run:
 
  
-    `ssh 192.168.5.31 -X -l bachelor`
+    `ssh 192.168.5.31 -X -l bachelor` (TODO IP, password?)
 
 
-    (Password is six characters, similar to the vnet password)
-   
-
-    `cd repository/visionlocalization_old/build`
+    `cd repository/visionlocalization_old/build` (TODO update this repo name)
 
 
     `./startCameras.sh LAPTOP_IP`
