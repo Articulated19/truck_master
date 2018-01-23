@@ -108,7 +108,7 @@ For regulating commands to the hardware API, choosing between manual and automat
 
 * Set goals and subgoals just like in the simulator
 
-![Controls](https://raw.githubusercontent.com/ArticulatedControl17/truck_master/master/xbox_controller.png)
+![Controls](https://github.com/ArticulatedControl18/truck_master/raw/master/xbox_controller.png)
 
 - The Dead Man's Switch needs to be pressed for the truck to move. (Applies to both manual and automatic driving)
 - The select button changes the behavior of the gas pedal (nothing else), if it is used for reversing or driving forwards.
