@@ -56,5 +56,8 @@ node_auto_master = ET.SubElement(launch, "node", name= "auto_master", pkg= "truc
 node_auto_master.set("if", "$(arg auto_master)")
 ET.SubElement(node_auto_master, "param", name="sim", type="boolean", value="$(arg sim)")
 
+obstacle_node = ET.SubElement(launch, "node", name="obstacle_node", pkg="truck_map", type="obstacle_node.py")
+obstacle_node.set("if", "$(arg obstacles)")
+
 tree = ET.ElementTree(launch)
 tree.write("master.launch")
