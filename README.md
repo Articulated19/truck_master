@@ -6,9 +6,13 @@ For regulating commands to the hardware API, choosing between manual and automat
    * Configure the three hosts (ceiling computer, laptop, PI), so they can communicate via ROS.
    * They need the same subnet
    * 2018-01-22: Set the following static IPs through configuring the router: 192.168.1.xxx
+   
        Truck RPI: 134
+       
        Red tape RPI: 142
+       
        Ceiling computer: 136
+   * 2018-01-23: ROS_HOSTNAME and ROS_MASTER_URI set on the PI .bashrc to allow bi-directional communication.
      
 
 * Laptop: Download this [script](https://github.com/ArticulatedControl18/truck_master/blob/master/installation.sh), which downloads ROS, creates a new catkin workspace and clones down all the repositories you need. If you don't need to do all this, just comment out the lines you don't want to run
@@ -104,7 +108,7 @@ For regulating commands to the hardware API, choosing between manual and automat
 
 * Set goals and subgoals just like in the simulator
 
-![Controls](https://raw.githubusercontent.com/ArticulatedControl17/truck_master/master/xbox_controller.png)
+![Controls](https://github.com/ArticulatedControl18/truck_master/raw/master/xbox_controller.png)
 
 - The Dead Man's Switch needs to be pressed for the truck to move. (Applies to both manual and automatic driving)
 - The select button changes the behavior of the gas pedal (nothing else), if it is used for reversing or driving forwards.
