@@ -37,6 +37,8 @@ git clone https://github.com/ArticulatedControl18/path_planning
 git clone https://github.com/ArticulatedControl18/custom_msgs
 git clone https://github.com/ArticulatedControl18/truck_map
 git clone https://github.com/ArticulatedControl18/truck_visualization
+git clone https://github.com/ArticulatedControl18/section_lock.git
+git clone https://github.com/ArticulatedControl18/section_identifier.git
 
 #--- build workspace---
 cd ..
