@@ -69,9 +69,6 @@
      <param name="rpi" type="boolean" value="$(arg rpi)"/>
   </node>
 
-  <node name="section_identifier" pkg="section_identifier" type="section_identifier.py" />
-  <node name="section_lock" pkg="section_lock" type="section_lock.py" />
-
   <node if="$(arg auto_master)" name= "auto_master" pkg= "truck_automatic_ctrl" type="auto_master.py">
      <param name="sim" type="boolean" value="$(arg sim)"/>
   </node>
