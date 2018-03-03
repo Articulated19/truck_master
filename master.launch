@@ -8,6 +8,7 @@
   <arg name="obstacles" default="true" />
   <arg name="path_planning" default="true"/>
   <arg name="auto_master" default="true"/>
+  <arg name="front_tag" default="1" />
   
   <arg name="hw_api" default="false"/>
   
@@ -71,6 +72,7 @@
 
   <node if="$(arg auto_master)" name= "auto_master" pkg= "truck_automatic_ctrl" type="auto_master.py">
      <param name="sim" type="boolean" value="$(arg sim)"/>
+     <param name="front_tag" type="int" value="$(arg front_tag)"/>
   </node>
   
   <node if="$(arg obstacles)" name="obstacle_node" pkg="truck_map" type="obstacle_node.py"/>
