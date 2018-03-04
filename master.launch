@@ -17,6 +17,7 @@
   <arg name="gamepad_type" default="xbox"/>
   <arg name="gamepad_input" default="/dev/input/js0"/>
   <arg name="gulliview" default="true"/>
+  <arg name="trailer" default="true"/>
   
   
   <group if="$(arg sim)">
@@ -56,7 +57,9 @@
   
   
   <group if="$(arg visual)" >
-        <node name= "visualization" pkg= "truck_visualization" type="visualization.py"/>
+        <node name= "visualization" pkg= "truck_visualization" type="visualization.py">
+            <param name="trailer" type="bool" value="$(arg trailer)" />
+        </node>
         <node name="rviz" pkg="rviz" type="rviz" args="-d $(find truck_visualization)/config.rviz" />
   </group>
 
