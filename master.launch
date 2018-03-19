@@ -29,7 +29,7 @@
   
   <group unless="$(arg sim)">
       
-      <node if="$(arg gulliview)" name= "gulliview" pkg= "gulliview_server" type="gulliview"/>
+      <node if="$(arg gulliview)" name= "gulliview" pkg= "gulliview_server" type="gv_socket_server.py"/>
       
       <group if="$(arg hw_api)">
          <node name="cmd_node" pkg="truck_hw_api" type="cmd_node.py" />
