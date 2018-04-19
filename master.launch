@@ -18,6 +18,7 @@
   <arg name="gamepad_input" default="/dev/input/js0"/>
   <arg name="gulliview" default="true"/>
   <arg name="trailer" default="true"/>
+  <arg name="truckid" default="1"/>
   
   
   <group if="$(arg sim)">
@@ -29,7 +30,7 @@
   
   <group unless="$(arg sim)">
       
-      <node if="$(arg gulliview)" name= "gulliview" pkg= "gulliview_server" type="gv_socket_server.py"/>
+      <node if="$(arg gulliview)" name= "gulliview" pkg= "gulliview_server" type="gv_socket_server.py" output="screen"/>
       
       <group if="$(arg hw_api)">
          <node name="cmd_node" pkg="truck_hw_api" type="cmd_node.py" />
