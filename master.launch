@@ -73,9 +73,9 @@
      <param name="rpi" type="boolean" value="$(arg rpi)"/>
   </node>
 
-  <node if="$(arg auto_master)" name= "auto_master" pkg= "truck_automatic_ctrl" type="auto_master.py">
+   <node if="$(arg auto_master)" name= "auto_master" pkg= "truck_automatic_ctrl" type="auto_master.py">
      <param name="sim" type="boolean" value="$(arg sim)"/>
-     <param name="front_tag" type="int" value="$(arg front_tag)"/>
+     <param name="id" type="int" value="$(arg truckid)"/>
   </node>
   
   <node if="$(arg obstacles)" name="obstacle_node" pkg="truck_map" type="obstacle_node.py"/>
